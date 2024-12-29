@@ -1,7 +1,8 @@
 # Next-Gen Recommendation Engine: Powered by AI, ML, and NLP 🤖🧠
 
 "Welcome to the **Shop-Nexus** Recommender System: AI-Powered E-commerce Platform for Personalized Product Recommendations 🛍️"
-Unlock the power of personalized shopping with our advanced recommendation engine. Designed for e-commerce businesses, marketers, and online shoppers, Shop-Nexus helps deliver highly relevant product suggestions tailored to each user’s preferences and behavior. With intelligent algorithms that analyze user activity and product data, you can offer personalized recommendations that boost engagement, drive conversions, and enhance the shopping experience. Whether you're managing an online store, exploring new products, or seeking better customer insights, Shop-Nexus empowers you to make smarter decisions and optimize your e-commerce strategy effortlessly. 🚀
+
+- Unlock the power of personalized shopping with our advanced recommendation engine. Designed for e-commerce businesses, marketers, and online shoppers, Shop-Nexus helps deliver highly relevant product suggestions tailored to each user’s preferences and behavior. With intelligent algorithms that analyze user activity and product data, you can offer personalized recommendations that boost engagement, drive conversions, and enhance the shopping experience. Whether you're managing an online store, exploring new products, or seeking better customer insights, Shop-Nexus empowers you to make smarter decisions and optimize your e-commerce strategy effortlessly. 🚀
 
 ### *** Note: To access the Web Application Kindly visit my portfolio website or you can contact me through LinkedIn/Mail.***
 
