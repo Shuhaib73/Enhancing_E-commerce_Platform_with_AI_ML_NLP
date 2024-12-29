@@ -1,0 +1,7 @@
+2024-12-27 20:44:16,295 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Program Files\\Python311\\Lib\\site-packages\\pinecone_plugins'])
+2024-12-27 20:44:16,296 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-27 20:44:16,353 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-12-27 20:44:16,360 - root - INFO - Starting data ingestion pipeline.
+2024-12-27 20:44:16,360 - root - INFO - Data ingestion started for file: C:\Users\user\Desktop\Python\GenAI_Projects\Project_ecommerce\notebooks\final_data.csv 
+2024-12-27 20:44:29,937 - root - INFO - Successfully ingested 43971 records into MongoDB.
+2024-12-27 20:44:29,956 - root - INFO - Data ingestion pipeline completed successfully.

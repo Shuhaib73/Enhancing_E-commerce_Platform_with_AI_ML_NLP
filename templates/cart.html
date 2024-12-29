@@ -1,0 +1,88 @@
+{% extends "home.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart_styles.css') }}">
+{% endblock %}
+
+{% block profile %}
+    <div class="icon-container">
+        <a href="{{ url_for('account') }}" class="icon-link">  
+            <i class="bx bx-user"></i>
+            <span class="icon-text">{{ session['user_name'] if session.get('user_name') else 'Account' }}</span>
+        </a>
+        <a href="{{ url_for('logged_home') }}" class="icon-link">
+            <i class="bx bx-store"></i>
+            <span class="icon-text">Home</span>
+        </a>
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block items %}
+    <div class="main-content">
+        <section id="cart" class="cart-cls">
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                        <td>Remove</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>{{ item['product_id'] }}</td>
+                        <td><img src="{{ item['link'] }}" alt="loading image" width="50px" height="50px"></td>
+                        <td>{{ item['brand'] + ' ' + item['articleType'] +'-'+ item['baseColour']}}</td>
+                        <td>{{ item['price'] }}</td>
+                        <td>
+                            <form action="{{ url_for('update_item_cart', product_id=item['product_id']) }}" method="POST">
+                                <input type="number" name="quantity" value="{{ item['quantity'] }}" min="1">
+                                <button type="submit" class="update-btn">Update</button>
+                            </form>
+                            
+                        </td>
+                        <td>₹{{ item['price'] * item['quantity'] }}</td>
+                        <td>
+                            <form action="{{ url_for('remove_item_cart', product_id=item['product_id']) }}" method="POST" style="display: inline;">
+                                <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                                    <i class="far fa-times-circle" style="font-size: 20px; color: #355def;"></i> <!-- Red color for remove icon -->
+                                </button>
+                            </form>
+                        </td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"><strong>Total:</strong></td>
+                        <td colspan="2">
+                            {% if items %}
+                                {% set ns = namespace(total_sum=0) %}
+                                {% for item in items %}
+                                    {% set ns.total_sum = ns.total_sum + (item['price'] * item['quantity']) %}
+                                {% endfor %}
+                                ₹{{ ns.total_sum }}
+                            {% else %}
+                                ₹0
+                            {% endif %}
+                        </td>
+                    </tr>
+                    
+                </tfoot>
+            </table>
+        </section>
+    </div>
+{% endblock %}
+
+
+

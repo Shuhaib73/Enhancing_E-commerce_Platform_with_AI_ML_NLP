@@ -1,0 +1,16 @@
+2024-12-27 18:46:36,390 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Program Files\\Python311\\Lib\\site-packages\\pinecone_plugins'])
+2024-12-27 18:46:36,391 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-27 18:46:36,441 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-12-27 18:46:36,443 - root - INFO - Starting data ingestion pipeline - Pinecone.
+2024-12-27 18:46:36,443 - root - INFO - Data ingestion started for file: C:\Users\user\Desktop\Python\GenAI_Projects\Project_ecommerce\notebooks\final_data.csv - Pinecone
+2024-12-27 18:46:49,562 - root - INFO - Index Created Successfully: product-index1
+
+2024-12-27 18:46:51,258 - root - INFO - here is the index description: {'dimension': 768,
+ 'index_fullness': 0.0,
+ 'namespaces': {},
+ 'total_vector_count': 0}
+2024-12-27 18:46:55,321 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Program Files\\Python311\\Lib\\site-packages\\pinecone_plugins'])
+2024-12-27 18:46:55,321 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-27 18:46:55,322 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-12-27 19:00:48,464 - root - INFO - Successfully ingested documents into Pinecone.
+2024-12-27 19:00:48,631 - root - INFO - Data ingestion pipeline completed successfully - Pinecone.

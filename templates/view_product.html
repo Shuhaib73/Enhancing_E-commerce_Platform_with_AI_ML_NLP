@@ -1,0 +1,150 @@
+{% if logged_in %}
+    {% extends "home.html" %}
+{% else %}
+    {% extends "base.html" %}
+{% endif %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='view_product_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+{% block icons %}
+    <link rel="icon" href="{{ url_for('static', filename='images/logo_main.png') }}" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/55d7ca6d4f.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons cnd -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+{% endblock %}
+
+
+{% block logo %}
+    <a href="#" class="logo" id="web_log">
+        <img src="{{ url_for('static', filename='images/logo_main.png') }}" alt="Logo" width="100px" height="100px">
+    </a>
+{% endblock %}
+
+
+{% block nav_link %}
+    <a href="{{ url_for('logged_home') if logged_in else url_for('home') }}" class="link">Home</a>
+    <a href="{{ url_for('men_pg') }}" class="link">Men</a>
+    <a href="{{ url_for('women_pg') }}" class="link">Women</a>
+    <a href="{{ url_for('personal_pg') }}" class="link">Personal Care</a>
+    <div class="menu-container">
+        <span class="new-ad">New</span>
+        <a href="{{ url_for('footwear_pg') }}" class="link">Footwear</a>
+    </div>
+
+    <form class="search-form" id="search-form", method="POST", action="{{ url_for('search_products') }}">
+        <input type="text" class="search-input" placeholder="Search..." aria-label="Search" name="query" required>
+        <button type="submit" class="search-button"><i class="bx bx-search"></i></button>
+    </form>
+
+    <div class="mobile close" id="close"><i class='bx bx-x'></i></div>
+{% endblock %}
+
+
+{% block items %}
+    
+    {% block products %}
+        <div class="product-center">
+            <div class="product-des">
+                <div class="product-image">
+                    <img src="{{ product['link'] }}" alt="Product Image">
+                </div>
+
+                <div class="product-info">
+                    <h2 style="color: rgb(88, 87, 87);">{{ product['productDisplayName'] }}</h2>
+                    <p><strong>Brand:</strong> {{ 'Red-Tape' if product['brand'] == 'Red' else product['brand'] }}</p>
+                    <p><strong>Category:</strong> {{ product['masterCategory'] }} > {{ product['subCategory'] }}</p>
+                    <p><strong>Article Type:</strong> {{ product['articleType'] }}</p>
+                    <p><strong>Base Color:</strong> {{ product['baseColour'] }}</p>
+                    <p><strong>Usage:</strong> {{ product['usage'] }}</p>
+                    <p><strong>Price:</strong> ₹{{ product['price'] }}</p>
+                    <p><strong>Ratings:</strong> {{ product['ratings'] }} stars</p>
+                    {% if product['discount'] %}
+                        <p><strong>Discount:</strong> {{ product['discount'] }}%</p>
+                    {% endif %}
+                    <p><strong>Tag:</strong> {{ product['tag'] }}</p>
+                    <p><strong>Product ID:</strong> {{ product['id'] }}</p>
+
+                    <form action="{{ url_for('add_item_cart', product_id=product['id']) }}" method="POST">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+
+            <h3 class="rec-title">Recommended for You</h3>
+            <div class="recommendations">
+                {% for product in content_recommendations %}
+                <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb">
+                    <div class="product-item">
+                        
+                        {% if product.get('discount') and product['discount'] != 0 %}
+                            <span class="discount">{{ product['discount'] }}%</span>
+                        {% endif %}
+
+                        <div class="overlay">
+                            <img src="{{ product['link'] }}" alt="loading"
+                            onerror="this.onerror=null; this.src='https://i.gifer.com/VAyR.gif';" 
+                            style="background-repeat: no-repeat; object-fit: contain;">
+                        </div>
+                        
+                        <div class="product-info1">
+                            <span style="color: rgb(65, 65, 65);">{{ 'Red-Tape' if product['brand'] == 'Red' else product['brand'] }}</span>
+                            <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb" style="color: rgb(65, 65, 65);">
+                                {{ product['baseColour'] + ' ' + product['articleType'] }}
+                            </a>
+                            <h4>₹{{ product['price'] }}</h4>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+
+            </div>
+
+            <!-- Collaborative Recommendations -->
+            <!-- <div class="recommendations">
+                <h4>Recommended Products Based on User Preferences</h4>
+                {% for product in collaborative_recommendations %}
+                    <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb">
+                        <div class="product-item">
+                            
+                            {% if product.get('discount') and product['discount'] != 0 %}
+                                <span class="discount">{{ product['discount'] }}%</span>
+                            {% endif %}
+
+                            <div class="overlay">
+                                <img src="{{ product['link'] }}" alt="loading"
+                                onerror="this.onerror=null; this.src='https://i.gifer.com/VAyR.gif';" 
+                                style="background-repeat: no-repeat; object-fit: contain;">
+                            </div>
+                            
+                            <div class="product-info1">
+                                <span>{{ product['brand'] }}</span>
+                                <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb">
+                                    {{ product['baseColour'] + ' ' + product['articleType'] }}
+                                </a>
+                                <h4>₹{{ product['price'] }}</h4>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div> -->
+        </div>
+
+
+
+    {% endblock %}
+
+{% endblock %}
+
+
+
+
+

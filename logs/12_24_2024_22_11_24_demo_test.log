@@ -1,0 +1,2 @@
+2024-12-24 22:11:24,322 - root - INFO - unsupported operand type(s) for +: 'int' and 'str'
+2024-12-24 22:11:24,323 - root - ERROR - Error occurred in python script: [C:\Users\user\Desktop\Python\GenAI_Projects\project_ecommerce\demo.py] at line number [15]: unsupported operand type(s) for +: 'int' and 'str'

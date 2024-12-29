@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_style.css') }}">
+{% endblock %}
+
+{% block signin %}
+    <div class="top-bar">
+        <a href="#" class="top-bar-text">Customer Care</a>
+        <a href="{{ url_for('logout') }}" class="top-bar-text" id="logout">
+            <i class="bx bx-log-out"></i></box-icon>
+            Sign out
+        </a>
+    </div>
+{% endblock %}
+
+
+{% block profile %}
+<div class="icon-container">
+    <a href="{{ url_for('account') }}" class="icon-link">  
+        <i class="bx bx-user"></i>
+        <span class="icon-text">{{ session['user_name'] if session.get('user_name') else 'Account'}}</span>
+    </a>
+    <a href="{{ url_for('cart') }}" class="icon-link">
+        <i class="bx bx-cart"></i>
+        <span class="icon-text">Cart</span>
+    </a>
+</div>
+{% endblock %}

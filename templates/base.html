@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="id=edge">
+        <meta name="author" content="Mohamed Shuhaib">
+        <meta name="description" content="Ecommerce website...">
+        <link rel="icon" href="./images/icon.png" type="image/x-icon">
+
+        {% block title %}
+            <title>Shop Nexus</title>
+        {% endblock %}
+
+        {% block styles %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='base_style.css') }}">
+        {% endblock %}
+
+        {% block icons %}
+            <link rel="icon" href="static/images/logo_main.png" type="image/x-icon">
+
+            <script src="https://kit.fontawesome.com/55d7ca6d4f.js" crossorigin="anonymous"></script>
+
+            <!-- Boxicons cnd -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+        {% endblock %}
+
+    </head>
+
+    {% block body %}
+        <body>
+            {% block signin %}
+                <div class="top-bar">
+                    <a href="{{ url_for('login') }}" ><i class="bx bx-log-in"></i><span class="top-bar-text">Sign In / Join Nexus</span></a>
+                    <a href="#" class="top-bar-text">   Customer Care</a>
+                </div>
+            {% endblock %}
+
+            {% block header %}
+                {% block logo %}
+                <a href="#" class="logo" id="web_log">
+                    <img src="static/images/logo_main.png" alt="Logo" width="100px" height="100px">
+                </a>
+                {% endblock %}
+                <header class="header" id="header">
+                    <div class="nav-container">
+                        
+                        <div class="mobile" id="menu"><i class='bx bx-menu-alt-right'></i></div>
+                        <nav class="navbar" id="navbar">
+                            {% block nav_link %}
+                            <!-- <a href="{{url_for('home')}}">Home</a> -->
+                            <a href="{{ url_for('men_pg') }}" class="link">Men</a>
+                            <a href="{{ url_for('women_pg') }}" class="link">Women</a>
+                            <a href="{{ url_for('personal_pg') }}" class="link">Personal Care</a>
+                            <a href="{{ url_for('accessories_pg') }}" class="link">Accessories</a>
+                            <div class="menu-container">
+                                <span class="new-ad">New</span>
+                                <a href="{{ url_for('footwear_pg') }}" class="link">Footwear</a>
+                            </div>
+                                <!-- <sup style="color: red; display: inline-block;"> New</sup> -->
+                        
+                            <form class="search-form" id="search-form", method="POST", action="{{ url_for('search_products') }}">
+                                <input type="text" class="search-input" placeholder="Search..." aria-label="Search" name="query" required>
+                                <button type="submit" class="search-button"><i class="bx bx-search"></i></button>
+                            </form>
+
+                            <div class="mobile close" id="close"><i class='bx bx-x'></i></div>
+                            {% endblock %}
+
+                            {% block profile %}
+                            <div class="icon-container">
+                                <a href="{{ url_for('account') }}" class="icon-link">  
+                                    <i class="bx bx-user"></i>
+                                    <span class="icon-text">Profile</span>
+                                </a>
+                                <a href="{{ url_for('cart') }}" class="icon-link">
+                                    <i class="bx bx-cart"></i>
+                                    <span class="icon-text">Cart</span>
+                                </a>
+                            </div>
+                            {% endblock %}
+                        </nav>
+
+                    </div>
+                </header>
+
+            {% endblock %}
+
+            {% block items %}
+            {% endblock %}
+
+            {% block content %}
+                <div id="slider">
+                    <figure>
+                        <img id="banner_img1" src="https://assets.ajio.com/cms/AJIO/WEB/D_1.0_UHP_SC_ADIDAS_P1.jpg" alt="Main Banner" onclick="window.location.href='{{ url_for('men_pg') }}'">
+                        <img id="banner_img2" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06042024-MainBannerDailyChanging-Z1-P7-ADIDAS-NIKE-MIN35.jpg" alt="Banner Image" onclick="window.location.href='{{ url_for('women_pg') }}'">
+                        <img id="banner_img3" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05042024-MAINBANNER-Z1-P1-Ajiomania-5080.gif" alt="Banner Image" onclick="window.location.href='{{ url_for('women_pg') }}'">
+                        <img id="banner_img4" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06042024-MainBannerDailyChanging-Z1-P6-DILLINGER-IVOC-MIN60.jpg" alt="Banner Image" onclick="window.location.href='{{ url_for('women_pg') }}'">
+                        <img id="banner_img5" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06042024-MainBannerDailyChanging-Z1-P5-DNMX-NETPLAY-UNDER499.jpg" alt="Banner Image" onclick="window.location.href='{{ url_for('men_pg') }}'">
+                        <img id="banner_img6" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06042024-MainBannerDailyChanging-Z1-P4-AVAASA-GULMOHARJAIPUR-FLAT60.jpg" alt="Banner Image" onclick="window.location.href='{{ url_for('women_pg') }}'"> 
+                        <img id="banner_img7" src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06042024-MainBannerDailyChanging-Z1-P3-AX-SUPERDRY-MIN40.jpg" alt="Main Banner" onclick="window.location.href='{{ url_for('women_pg') }}'">
+                        <img id="banner_img7" src="https://assets.ajio.com/cms/AJIO/WEB/d-1.0-UHP-05122024-BrandHours-Z3-P2-dnmx-under500.jpg" alt="Main Banner" onclick="window.location.href='{{ url_for('men_pg') }}'">
+                    </figure>
+                </div>
+                
+                <div class="summer_container">
+                    <h2>Summer Specials</h2>
+                    <h4>Latest Styles To Sizzle In!</h4>
+                </div>
+    
+    
+                <div class="poster2_container">
+                    <a href="{{ url_for('men_pg') }}">
+                        <img id="poster2_img1" class="post2_img" src="static/images/post2_img1.png" aria-label="Poster2 Banner">
+                    </a>
+                    <a href="{{ url_for('women_pg') }}">
+                        <img id="poster2_img2" class="post2_img" src="static/images/post2_img2.png" aria-label="Poster2 Banner">
+                    </a>
+                    <a href="{{ url_for('men_pg') }}">
+                        <img id="poster2_img3" class="post2_img" src="static/images/post2_img3.png" aria-label="Poster2 Banner">
+                    </a>
+                    <a href="{{ url_for('women_pg') }}">
+                        <img id="poster2_img4" class="post2_img" src="static/images/post2_img4.png" aria-label="Poster2 Banner">
+                    </a>
+                </div>
+    
+                <div class="poster3_container">
+                    <a href="{{ url_for('women_pg') }}">
+                        <img class="post3_img" src="static/images/post3_img1.png" alt="Poster3 Banner">
+                    </a>
+                    <a href="{{ url_for('women_pg') }}">
+                        <img class="post3_img" src="static/images/post3_img2.png" alt="Poster3 Banner">
+                    </a>
+                    <a href="{{ url_for('women_pg') }}">
+                        <img class="post3_img" src="static/images/post3_img3.png" alt="Poster3 Banner">
+                    </a>
+                    <a href="{{ url_for('women_pg') }}">
+                        <img class="post3_img" src="static/images/post3_img4.png" alt="Poster3 Banner">
+                    </a>
+    
+                </div>
+
+                <div class="poster4_container">
+                    <a href="{{ url_for('footwear_pg') }}">
+                        <img class="post4_img" src="static/images/post4_img2.png" alt="Poster4 Banner">
+                    </a>
+                    <a href="{{ url_for('footwear_pg') }}">
+                        <img class="post4_img" src="static/images/post4_img2.1.png" alt="Poster4 Banner">
+                    </a>
+                    <a href="{{ url_for('footwear_pg') }}">
+                        <img class="post4_img" src="static/images/post4_img3.png" alt="Poster4 Banner">
+                    </a>
+                    <a href="{{ url_for('footwear_pg') }}">
+                        <img class="post4_img" src="static/images/post4_img4.png" alt="Poster4 Banner">
+                    </a>
+    
+                </div>
+    
+                <div class="poster5_container">
+                    <h3>Discover Online Stores</h3>
+                </div>
+    
+                <div class="poster7_back">
+                    <img class="pst7_img" src="static/images/post7_img1.png">
+                    <img class="pst7_img" src="static/images/post7_img2.png">
+                    <img class="pst7_img" src="static/images/post7_img3.png">
+                </div>
+            {% endblock %}
+            
+            {% block footer %}
+                <footer>
+                    <div class="Main_footer">
+                        <div class="footer_1">
+                            <h1>Shop Nexus</h1>
+                            <a href="{{ url_for('login') }}">Who We are</a>
+                            <a href="{{ url_for('login') }}">Join Our Team</a>
+                            <a href="{{ url_for('login') }}">Terms & Condition</a>
+                            <a href="#">We Respect Your Privacy</a>
+                            <a href="{{ url_for('login') }}">Fees & Payments</a>
+                            <a href="{{ url_for('cart') }}">Returns & Refund Policy</a>
+                            <a href="#">Promotions Terms & Conditions</a>
+                        </div>
+                        <div class="footer_2">
+                            <h1>Help</h1>
+                            <a href="{{ url_for('cart') }}">Track Your Order</a>
+                            <a href="#">FAQs</a>
+                            <a href="{{ url_for('cart') }}">Returns</a>
+                            <a href="{{ url_for('cart') }}">Cancellations</a>
+                            <a href="#">Payments</a>
+                            <a href="#">Customer Care</a>
+                            <a href="#">How Do I Redeem My Coupon</a>
+                        </div>
+                        <div class="footer_3">
+                            <h1>Shop by</h1>
+                            <a href="{{ url_for('men_pg') }}">Men</a>
+                            <a href="{{ url_for('women_pg') }}">Women</a>
+                            <a href="{{ url_for('personal_pg') }}">Personal Care</a>
+                            <a href="{{ url_for('accessories_pg') }}">Accessories</a>
+                            <a href="#">Collections</a>
+                        </div>
+                        <div class="footer_4">
+                            <h1>Follow US</h1>
+                            <a href="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/mohamedshuhaib/" target="_blank">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Instagram</a>
+                
+                        </div>
+                    </div>
+                    
+                </footer>
+            {% endblock %}
+
+            
+        
+    
+            {% block scriptbody %}
+                <script>
+
+                    const navbar = document.getElementById('navbar');
+                    const closeMenu = document.getElementById('close');
+                    const menu = document.getElementById('menu');
+
+                    menu.addEventListener('click', () => {
+                        navbar.classList.add('active')
+                    });
+                    closeMenu.addEventListener('click', () => {
+                        navbar.classList.remove('active')
+                    });
+
+
+                </script>
+
+            {% endblock %}
+
+        </body>
+    {% endblock %}
+
+</html>

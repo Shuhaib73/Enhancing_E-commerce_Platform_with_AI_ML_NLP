@@ -1,0 +1,4 @@
+2024-12-25 13:41:53,788 - root - INFO - Starting data ingestion pipeline.
+2024-12-25 13:41:53,789 - root - INFO - Data ingestion started for file: C:\Users\user\Desktop\Python\GenAI_Projects\Project_ecommerce\notebooks\final_data.csv 
+2024-12-25 13:42:03,608 - root - INFO - Successfully ingested 43971 records into MongoDB.
+2024-12-25 13:42:03,631 - root - INFO - Data ingestion pipeline completed successfully.

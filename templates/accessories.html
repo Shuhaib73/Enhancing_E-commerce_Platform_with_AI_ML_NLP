@@ -1,0 +1,85 @@
+{% if logged_in %}
+    {% extends "home.html" %}
+{% else %}
+    {% extends "base.html" %}
+{% endif %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='Personal_Care.css') }}">
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block nav_link %}
+    <a href="{{ url_for('logged_home') if logged_in else url_for('home') }}" class="link">Home</a>
+    <a href="{{ url_for('men_pg') }}" class="link">Men</a>
+    <a href="{{ url_for('women_pg') }}" class="link">Women</a>
+    <a href="{{ url_for('personal_pg') }}" class="link">Personal Care</a>
+    <div class="menu-container">
+        <span class="new-ad">New</span>
+        <a href="{{ url_for('footwear_pg') }}" class="link">Footwear</a>
+    </div>
+
+    <form class="search-form" id="search-form", method="POST", action="{{ url_for('search_products') }}">
+        <input type="text" class="search-input" placeholder="Search..." aria-label="Search" name="query" required>
+        <button type="submit" class="search-button"><i class="bx bx-search"></i></button>
+    </form>
+
+    <div class="mobile close" id="close"><i class='bx bx-x'></i></div>
+{% endblock %}
+
+
+{% block items %}
+    <section class="section-items">
+        <div class="sidebar">
+            <P>Accessories</P>
+            <h2>Categories</h2>
+            
+            <form class="category-filter" method="GET">
+                <label><input type="checkbox" name="category" value="Bags"> Bags</label>
+                <label><input type="checkbox" name="category" value="Watches"> Watches</label>
+                <label><input type="checkbox" name="category" value="Jewellery"> Jewellery</label>
+                <label><input type="checkbox" name="category" value="Eyewear"> Eyewear</label>
+                <label><input type="checkbox" name="category" value="Wallets"> Wallets</label>
+                <label><input type="checkbox" name="category" value="Belts"> Belts</label>
+                <label><input type="checkbox" name="category" value="Socks"> Socks</label>
+                <label><input type="checkbox" name="category" value="Headwear"> Headwear</label>
+                <label><input type="checkbox" name="category" value="Ties"> Ties</label>
+                <label><input type="checkbox" name="category" value="Scarves"> Scarves</label>
+                <label><input type="checkbox" name="category" value="Cufflinks"> Cufflinks</label>
+                <label><input type="checkbox" name="category" value="Stoles"> Stoles</label>
+
+            
+                <button type="submit">Apply Filters</button>
+                
+            </form>
+        </div>
+        {% block products %}
+            <div class="product-center">
+                {% for product in accessories_top50_products %}
+                <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb">
+                    <div class="product-item">
+                        <div class="overlay">
+                            <img src="{{ product['link'] }}" alt="loading"
+                            onerror="this.onerror=null; this.src='https://i.gifer.com/VAyR.gif';" style="background-repeat: no-repeat; object-fit: contain;">
+                            {% if product.get('discount') and product['discount'] !=0 %}
+                                <span class="discount">{{ product['discount'] }}%</span>
+                            {% endif %}
+                        </div>
+                        <div class="product-info">
+                            <span>{{ product['brand'] }}</span>
+                            <a href="{{ url_for('view_product', product_id=product['id']) }}" class="product-thumb">
+                                {{ product['productDisplayName'] }}
+                            </a>
+                            <h4>₹{{ product['price'] }}</h4>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+
+            </div>
+        {% endblock %}
+    </section>
+{% endblock %}

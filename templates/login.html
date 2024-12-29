@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Shop Nexus Sign In</title>
+{% endblock %}
+
+{% block styles %}
+    <!-- {{ super() }} -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <!-- Display Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="flash-message {{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+
+        {% endif %}
+    {% endwith %}
+
+
+
+    {% block content %}
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form action="{{ url_for('register') }}", method="POST">
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span class="sub-form-title">Register with E-mail</span>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+
+            <div class="form-container sign-in">
+                <form action="{{ url_for('login') }}" method="POST">
+                    <h1>Sign In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span class="sub-form-title">Login With Email & Password</span>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <a href="#">Forget Password?</a>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+
+
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <img src="static/images/logo_main.png" class="logo_main">
+
+                        <h1>Welcome To <br>Shop Nexus</h1>
+                        <p>Sign in with your Email & Password to Start Shopping</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <img src="static/images/logo_main.png" class="logo_main">
+                        <p style="font-weight: bold; font-size: 1rem;">Join <span style="color: rgb(171, 219, 88); font-size: 0.9rem;">Shop</span> <span style="color: rgb(8, 137, 8); font-size: 0.9rem;">Nexus</span> to Explore a World of Exclusive Deals</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block script %}
+        <script>
+            const container = document.getElementById('container');
+            const registerBtn = document.getElementById('register');
+            const loginBtn = document.getElementById('login');
+
+            registerBtn.addEventListener('click', () => {
+                container.classList.add("active");
+            });
+
+            loginBtn.addEventListener('click', () => {
+                container.classList.remove("active");
+            });
+
+            <!-- JavaScript to hide flash messages after 3 seconds -->
+
+            window.onload = function() {
+            // Select all flash message elements
+            var messages = document.querySelectorAll('.flash-message');
+
+                messages.forEach(function(message) {
+                    // Set a timeout to hide the message after 3 seconds
+                    setTimeout(function() {
+                        message.style.display = 'none';
+                    }, 5000);  // 3000ms = 3 seconds
+                });
+            };
+        </script>
+
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "home.html" %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='account_style.css') }}">
+{% endblock %}
+
+
+
+{% block profile %}
+    <div class="icon-container">
+        <a href="{{ url_for('cart') }}" class="icon-link">
+            <i class="bx bx-cart"></i>
+            <span class="icon-text">Cart</span>
+        </a>
+        <a href="{{ url_for('logged_home') }}" class="icon-link">  
+            <i class="bx bx-store"></i>
+            <span class="icon-text">Home</span>
+        </a>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="table-content">
+        <section id="cart" class="cart-cls">
+
+            <table>
+                <caption>
+                    <span class="highlight">User</span> Information
+                </caption>                
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td id="name">{{ session['user_name'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td id="email">{{ session['user_email'] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Orders</td>
+                        <td id="address">{{ session['total_orders'] if session.get('total_orders') else 'N/A' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Recent Order</td>
+                        <td id="address">{{ session['recent_order'] if session.get('recent_order') else 'N/A' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td id="phone">{{ session['phone]'] if session.get ('phone') else 'N/A' }}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td id="address">{{ session['address'] if session.get('address') else 'N/A' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+{% endblock %}
+
