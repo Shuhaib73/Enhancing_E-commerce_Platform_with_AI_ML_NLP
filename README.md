@@ -34,14 +34,14 @@
 - **MongoDB**: A NoSQL database for storing the product dataset, user credentials, and cart products efficiently, allowing easy scalability and management.
 - **PyMongo**: The Python driver for MongoDB, enabling seamless interaction with the database for retrieving and storing user-related data.
 - **Pinecone**: A vector database for performing semantic similarity searches, ensuring fast and relevant product recommendations based on user behavior and preferences.
-- **LangChain**: An open-source framework for developing applications powered by language models, used here for creating a robust AI-powered recommendation system.
+- **LangChain** 🔗: An open-source framework for developing applications powered by language models, used here for creating a robust AI-powered recommendation system.
 - **GoogleGenerativeAIEmbeddings**: Leveraging Google’s generative AI embeddings to create semantic vectors of text, enhancing the recommendation process by enabling more accurate and context-aware suggestions.
 - **Ensemble Retriever**: A powerful component for combining multiple retrieval methods to improve the accuracy and relevance of search results and recommendations.
 - **Docker 🐳**: Containerization technology used to package the application and its dependencies into isolated containers, ensuring consistency across various environments and simplifying deployment.
-- **GitHub Actions (CI/CD)**: Automated continuous integration and deployment pipelines that streamline the development process, allowing for automated testing, building, and deployment of the application to production.
+- **GitHub Actions (CI/CD)** 🔄: Automated continuous integration and deployment pipelines that streamline the development process, allowing for automated testing, building, and deployment of the application to production.
 - **Pandas**: A robust library for dataset management and processing.  
 - **WordCloud**: A powerful library for generating word clouds to visualize text data.  
-- **Matplotlib/Seaborn**: Used for creating impactful visualizations that simplify data insights.  
+- **Matplotlib/Seaborn 📈**: Used for creating impactful visualizations that simplify data insights.  
 
 ---
 ## 🌟 **Data Insights**
