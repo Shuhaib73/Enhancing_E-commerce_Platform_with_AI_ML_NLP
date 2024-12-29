@@ -28,7 +28,8 @@
 ## 🛠️ **Technologies Used**
 
 - **Python** 🐍: The core programming language that powers the app.  
-- **Flask**: A Backend web framework for building web applications.  
+- **Flask**: A Backend web framework for building web applications.
+- **HTML & CSS: The markup language used to structure the content and layout of the web page and CSS styles the HTML content, controlling the appearance, such as colors, fonts, and layouts..
 - **NLTK: The Natural Language Toolkit (NLTK)**: is used for processing and analyzing text, helping with tasks like tokenization and part-of-speech tagging
 - **Scikit-learn (sklearn)**: Used for implementing cosine similarity algorithms to measure the similarity between products and user preferences.
 - **MongoDB**: A NoSQL database for storing the product dataset, user credentials, and cart products efficiently, allowing easy scalability and management.
