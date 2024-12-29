@@ -1,4 +1,4 @@
-# Next-Gen Recommendation Engine: Powered by AI, ML, and NLP 🤖🧠
+# Next-Gen Recommendation Engine: Powered by AI, ML, and NLP 🤖🧠   
 
 "Welcome to the **Shop-Nexus** Recommender System: AI-Powered E-commerce Platform for Personalized Product Recommendations 🛍️"
 
@@ -46,10 +46,12 @@
 ---
 ## 🌟 **Data Insights**
 
-<img src="https://github.com/Shuhaib73/Sentiment-Analysis-NLP/blob/prj_branch/lstm_word.png" alt="Generated Image 1" style="max-width: 35%; height: 250px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
+**Gender Distribution in Fashion Product Categories**
 
+<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/pie-chart1.png" alt="Generated Image 1" style="max-width: 35%; height: 250px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
 
-<img src="https://github.com/Shuhaib73/Sentiment-Analysis-NLP/blob/prj_branch/lstm_res.png" alt="Generated Image 1" style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
+**Gender Distribution in Fashion Product Categories**
+<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/brand-dis.png" alt="Generated Image 1" style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
 
 
 ---
