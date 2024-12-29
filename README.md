@@ -62,10 +62,6 @@
 
 <img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.png" alt="Generated Image 1" style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
 
-**Seasonal Distribution of Products**
-
-<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.png" alt="Generated Image 1" style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
-
 ---
 
 ## 🌟 **Usage Examples**
