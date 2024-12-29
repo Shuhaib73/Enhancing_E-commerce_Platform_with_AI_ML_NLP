@@ -60,7 +60,7 @@
               <strong>​✒️<Click here to see :</strong> Distribution of Fashion Products Across Master Categories
        </summary>
                      <p align='center'>
-                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis.png' style='width: 50%; height:300px' />
+                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis.png' style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
                      </p>
 </details>
 
@@ -69,7 +69,7 @@
               <strong>​✒️<Click here to see :</strong> Seasonal Distribution of Products
        </summary>
                      <p align='center'>
-                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.pngg' style='width: 50%; height:300px' />
+                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.pngg' style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
                      </p>
 </details>
 
