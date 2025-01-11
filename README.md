@@ -38,7 +38,7 @@
 - **Python** 🐍: The core programming language that powers the app.  
 - **Flask**: A Backend web framework for building web applications.
 - **HTML & CSS**: The markup language used to structure the content and layout of the web page and CSS styles the HTML content, controlling the appearance, such as colors, fonts, and layouts..
-- **NLTK: The Natural Language Toolkit (NLTK)**: is used for processing and analyzing text, helping with tasks like tokenization and part-of-speech tagging
+- **NLTK: The Natural Language Toolkit (NLTK)**: is used for processing and analyzing text, helping with tasks like tokenization and stemming.
 - **Scikit-learn (sklearn)**: Used for implementing cosine similarity algorithms to measure the similarity between products and user preferences.
 - **MongoDB**: A NoSQL database for storing the product dataset, user credentials, and cart products efficiently, allowing easy scalability and management.
 - **PyMongo**: The Python driver for MongoDB, enabling seamless interaction with the database for retrieving and storing user-related data.
@@ -48,6 +48,8 @@
 - **Ensemble Retriever**: A powerful component for combining multiple retrieval methods to improve the accuracy and relevance of search results and recommendations.
 - **Docker 🐳**: Containerization technology used to package the application and its dependencies into isolated containers, ensuring consistency across various environments and simplifying deployment.
 - **GitHub Actions (CI/CD)** 🔄: Automated continuous integration and deployment pipelines that streamline the development process, allowing for automated testing, building, and deployment of the application to production.
+- **AWS ECR (Elastic Container Registry)** 🛢: A fully managed container registry for securely storing Docker images. A CI/CD pipeline has been created to automate the process of building Docker images and pushing them to ECR, ensuring efficient image management.
+- **AWS ECS (Elastic Container Service)** 🚀: A container orchestration service used to run and manage Docker containers in a scalable and secure environment. The CI/CD pipeline also automates deployment by pulling the Docker images from ECR and deploying them to ECS, ensuring seamless and reliable application updates.
 - **Pandas**: A robust library for dataset management and processing.  
 - **WordCloud**: A powerful library for generating word clouds to visualize text data.  
 - **Matplotlib/Seaborn 📈**: Used for creating impactful visualizations that simplify data insights.  
