@@ -6,8 +6,9 @@
 
 - Designed with a focus on personalization and efficiency, Shop-Nexus incorporates powerful technologies that enhance user engagement and optimize product discovery. By employing intelligent data analysis and dynamic recommendation systems, this platform streamlines decision-making and ensures a modern, intuitive shopping journey. 🚀
 
+### *** Note: Only a few files are included in this public repository to provide a general idea of the implementation. The complete workflow, including all detailed functionalities and configurations, operates within a private repository.
 
-### *** Note: To access the Web Application Kindly visit my portfolio website or you can contact me through LinkedIn/Mail.***
+ - Note: To access the Web Application Kindly visit my portfolio website or you can contact me through LinkedIn/Mail.***
 -------
 
 ## **CI/CD WorkFlow** 🚀
