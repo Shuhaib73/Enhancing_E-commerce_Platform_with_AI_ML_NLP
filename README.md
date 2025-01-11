@@ -11,7 +11,7 @@
 
 ## **CI/CD WorkFlow** 🚀
 
-<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/AWS-CICD-Complete-Workflow.png" alt="Generated Image 1" style="width: 800px; height: 400px;">
+<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/CICD_workflow.png" alt="Generated Image 1" style="width: 800px; height: 400px;">
 
 
 
