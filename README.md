@@ -7,7 +7,15 @@
 - With Shop-Nexus, e-commerce businesses can engage customers by offering personalized recommendations that enhance user experience, drive conversions, and increase sales. Whether you're a retailer seeking to optimize your inventory or a shopper discovering new products, Shop-Nexus empowers you to make smarter decisions and shop with confidence. Explore, discover, and enjoy a dynamic, personalized shopping journey with our state-of-the-art recommendation system, all while seamlessly managing your store on a cutting-edge e-commerce platform. 🚀
 
 ### *** Note: To access the Web Application Kindly visit my portfolio website or you can contact me through LinkedIn/Mail.***
+-------
 
+## **CI/CD WorkFlow** 🚀
+
+<img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/AWS-CICD-Complete-Workflow.png" alt="Generated Image 1" style="width: 800px; height: 350px;">
+
+
+
+--------
 ## 📖 **Features**
 
 ✅ **AI-Powered Recommendations**: Leverage advanced machine learning algorithms to provide personalized product suggestions based on user behavior and preferences. 🤖.  
@@ -44,7 +52,8 @@
 - **WordCloud**: A powerful library for generating word clouds to visualize text data.  
 - **Matplotlib/Seaborn 📈**: Used for creating impactful visualizations that simplify data insights.  
 
----
+
+-----
 ## 🌟 **Data Insights**
 
 **Gender Distribution in Fashion Product Categories**
