@@ -21,7 +21,7 @@
 
 ✅ **AI-Powered Recommendations**: Leverage advanced machine learning algorithms to provide personalized product suggestions based on user behavior and preferences. 🤖.  
 
-✅ **Real-Time Personalization**: Adapt and deliver dynamic product recommendations in real-time as customers browse your e-commerce platform. ⏱️
+✅ **Real-Time Personalization**: Adapt and deliver dynamic product recommendations in real-time as customers browse e-commerce platform. ⏱️
 
 ✅ **Product Discovery**: Help users discover new products they may be interested in, increasing engagement and sales. 🔍
 
