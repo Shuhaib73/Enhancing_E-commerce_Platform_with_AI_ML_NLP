@@ -70,7 +70,7 @@
               <strong>​✒️<Click here to see :</strong> Seasonal Distribution of Products
        </summary>
                      <p align='center'>
-                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.png' style="width: 900px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block; margin-right: 10px;">
+                            <img src='https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/templates/bar-dis2.png' style="margin-right: 10px; width: 400px; height: 280px; border: 2px solid #ccc; border-radius: 8px; display: inline-block;">
                      </p>
 </details>
 
