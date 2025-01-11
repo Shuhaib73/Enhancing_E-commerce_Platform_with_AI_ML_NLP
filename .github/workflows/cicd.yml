@@ -3,7 +3,7 @@ name: ecommerce-ai application
 
 
 # Trigger workflow on push and pull request to the main branch
-on:
+# on:
   # push:
     # branches: [ "main" ]
   # pull_request:
@@ -69,3 +69,51 @@ jobs:
     - name: Push Docker image to Docker Hub   # Step 5: Push the Docker image to Docker Hub
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/ecommerce-ai:latest
+
+
+    # New ECR
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: 'us-east-1'
+    
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+      with:
+        mask-password: 'true'
+
+    # Step 3: Build Docker image and push to ECR
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        # Build a docker container and
+        # push it to ECR so that it can
+        # be deployed to ECS.
+        docker build -t $ECR_REGISTRY/shop-nexus-repo:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/shop-nexus-repo:$IMAGE_TAG
+        echo "image=$ECR_REGISTRY/shop-nexus-repo:$IMAGE_TAG" >> $GITHUB_OUTPUT
+    
+    - name: Download current ECS task definition
+      run: aws ecs describe-task-definition --task-definition shop-nexus-task-definition --query taskDefinition > shop-nexus-task-definition.json
+
+    - name: Fill in the new image ID in the Amazon ECS task definition
+      id: task-def
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: shop-nexus-task-definition.json
+        container-name: shop-nexus-container
+        image: ${{ steps.build-image.outputs.image }}
+        
+    - name: Deploy Amazon ECS task definition
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: shop-nexus-service
+        cluster: ShopNexusCluster
+        wait-for-service-stability: true
