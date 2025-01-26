@@ -52,6 +52,9 @@
 - **GitHub Actions (CI/CD)** 🔄: Automated continuous integration and deployment pipelines that streamline the development process, allowing for automated testing, building, and deployment of the application to production.
 - **AWS ECR (Elastic Container Registry)** 🛢: A fully managed container registry for securely storing Docker images. A CI/CD pipeline has been created to automate the process of building Docker images and pushing them to ECR, ensuring efficient image management.
 - **AWS ECS (Elastic Container Service)** 🚀: A container orchestration service used to run and manage Docker containers in a scalable and secure environment. The CI/CD pipeline also automates deployment by pulling the Docker images from ECR and deploying them to ECS, ensuring seamless and reliable application updates.
+- **AWS Application Load Balancer (ALB)** 🌐: Integrated into the architecture to manage traffic distribution and provide persistent DNS. The ALB acts as the entry point to the ECS tasks, routing incoming traffic to the appropriate services based on listener rules. The setup ensures:
+   - High Availability: Traffic is distributed across multiple ECS tasks running in different Availability Zones.
+   - DNS Persistence: The ALB is tied to a fixed DNS name, ensuring consistent endpoints for users, even during application updates or container restarts.
 - **Pandas**: A robust library for dataset management and processing.  
 - **WordCloud**: A powerful library for generating word clouds to visualize text data.  
 - **Matplotlib/Seaborn 📈**: Used for creating impactful visualizations that simplify data insights.  
