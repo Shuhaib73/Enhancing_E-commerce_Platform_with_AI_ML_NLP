@@ -46,6 +46,7 @@
 - **PyMongo**: The Python driver for MongoDB, enabling seamless interaction with the database for retrieving and storing user-related data.
 - **Pinecone**: A vector database for performing semantic similarity searches, ensuring fast and relevant product recommendations based on user behavior and preferences.
 - **LangChain** 🔗: An open-source framework for developing applications powered by language models, used here for creating a robust AI-powered recommendation system.
+- **LangSmith** ⚙️: A debugging, testing and analytics platform within LangChain’s ecosystem, used to monitor and optimize the performance of the recommendation system bot, ensuring seamless user interactions.
 - **GoogleGenerativeAIEmbeddings**: Leveraging Google’s generative AI embeddings to create semantic vectors of text, enhancing the recommendation process by enabling more accurate and context-aware suggestions.
 - **Ensemble Retriever**: A powerful component for combining multiple retrieval methods to improve the accuracy and relevance of search results and recommendations.
 - **Docker 🐳**: Containerization technology used to package the application and its dependencies into isolated containers, ensuring consistency across various environments and simplifying deployment.
