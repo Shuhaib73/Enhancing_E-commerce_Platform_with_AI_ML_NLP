@@ -15,8 +15,6 @@
 
 <img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/CICD_workflow.png" alt="Generated Image 1" style="width: 800px; height: 400px;">
 
-
-
 --------
 ## 📖 **Features**
 
