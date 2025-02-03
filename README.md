@@ -30,7 +30,6 @@
 
 ✅ **Customizable Models**: Tailor recommendation algorithms to suit the unique needs of your business and audience. ⚙️
 
-
 ---
 
 ## 🛠️ **Technologies Used**
