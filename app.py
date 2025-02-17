@@ -10,13 +10,10 @@ from pinecone import Pinecone, ServerlessSpec
 from langchain_pinecone import PineconeVectorStore
 
 from langchain_google_genai import GoogleGenerativeAI, GoogleGenerativeAIEmbeddings
-
 from langchain_community.document_loaders import DataFrameLoader
-
 
 from src.configuration.register_db import User
 from src.configuration.products_db import Products
-
 
 load_dotenv()
 
