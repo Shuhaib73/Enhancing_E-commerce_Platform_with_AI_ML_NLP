@@ -100,8 +100,7 @@
 
 These examples highlight the versatility of this tool! 🚀
 
----
-
+-----
 
 ----
 
