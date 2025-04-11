@@ -104,11 +104,10 @@ These examples highlight the versatility of this tool! 🚀
 
 ----
 
-## 📧 **Contact**
+## 📧 **Contact Info**
 
 For questions, feedback, or contributions, please contact:  **Shuhaib**  
 **Email**: mohamed.shuhaib73@gmail.com
 **LinkedIn**: https://www.linkedin.com/in/mohamedshuhaib/
 
 ---
-
