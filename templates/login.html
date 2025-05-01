@@ -6,12 +6,10 @@
 
 {% block styles %}
     <!-- {{ super() }} -->
-
     <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
 {% endblock %}
 
 {% block body %}
-
     <!-- Display Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -23,8 +21,6 @@
 
         {% endif %}
     {% endwith %}
-
-
 
     {% block content %}
         <div class="container" id="container">
@@ -45,7 +41,6 @@
                 </form>
             </div>
 
-
             <div class="form-container sign-in">
                 <form action="{{ url_for('login') }}" method="POST">
                     <h1>Sign In</h1>
@@ -62,7 +57,6 @@
                     <button type="submit">Sign In</button>
                 </form>
             </div>
-
 
             <div class="toggle-container">
                 <div class="toggle">
@@ -96,13 +90,10 @@
             loginBtn.addEventListener('click', () => {
                 container.classList.remove("active");
             });
-
             <!-- JavaScript to hide flash messages after 3 seconds -->
-
             window.onload = function() {
             // Select all flash message elements
             var messages = document.querySelectorAll('.flash-message');
-
                 messages.forEach(function(message) {
                     // Set a timeout to hide the message after 3 seconds
                     setTimeout(function() {
@@ -111,7 +102,5 @@
                 });
             };
         </script>
-
     {% endblock %}
-
 {% endblock %}
