@@ -9,12 +9,11 @@
 #### **Note: Only a few files are included in this public repository to provide a general idea of the implementation. The complete workflow, including all detailed functionalities and configurations, operates within a private repository.**
 
  - Note: To access the Web Application Kindly visit my portfolio website or you can contact me through LinkedIn/Mail.
--------
+----------
 
 ## **CI/CD WorkFlow** 🚀
 
 <img src="https://github.com/Shuhaib73/Enhancing_E-commerce_Platform_with_AI_ML_NLP/blob/main/CICD_workflow.png" alt="Generated Image 1" style="width: 800px; height: 400px;">
-
 
 --------
 ## 📖 **Features**
@@ -31,7 +30,7 @@
 
 ✅ **Customizable Models**: Tailor recommendation algorithms to suit the unique needs of your business and audience. ⚙️
 
----
+-----
 
 ## 🛠️ **Technologies Used**
 
