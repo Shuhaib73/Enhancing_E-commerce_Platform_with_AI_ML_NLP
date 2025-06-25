@@ -20,7 +20,6 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
-
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -54,7 +53,6 @@ def login():
 def logged_home():
     return render_template('home.html')
 
-
 @app.route('/men', methods=['GET', 'POST'])
 def men_pg():
     # Get selected categories from the form if any
@@ -72,7 +70,6 @@ def men_pg():
     # Render the template and pass the products data
     return render_template('men_pg.html', men_top50_products=men_products, logged_in=session.get('logged_in'))
 
-
 @app.route('/women', methods=['GET', 'POST'])
 def women_pg():
     # Get selected categories from the form if any
@@ -89,7 +86,6 @@ def women_pg():
 
     # Render the template and pass the products data
     return render_template('women_pg.html', women_top50_products=women_products, logged_in=session.get('logged_in'))
-
 
 @app.route('/personal_pg', methods=['GET', 'POST'])
 def personal_pg():
